@@ -46,11 +46,11 @@
 }
 
 .main-nav ul li:last-child a {
-    color: lightskyblue;
+    color: #5682A9;
 }
 
 .main-nav ul li a:hover {
-    color: lightskyblue;
+    color: #5682A9;
 }
 
 @media (min-width: 1300px) {
