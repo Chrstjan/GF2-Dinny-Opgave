@@ -1,0 +1,53 @@
+.about-dinny,
+.the-staff,
+.delivery {
+    padding: 1.2rem;
+    background: #222;
+    padding-bottom: 1rem;
+}
+
+.about-header h2,
+.staff-header h2,
+.delivery-header h2 {
+    color: #9E360F;
+}
+
+.about-figure,
+.about-staff,
+.delivery-figure {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.about-figure img,
+.about-staff img,
+.delivery-figure img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.about-figure .more-about-dinny header,
+.more-about-staff header,
+.delivery-about header {
+    color: lightskyblue;
+}
+
+.more-about-dinny p,
+.more-about-staff p,
+.delivery-about p {
+    color: #ddd;
+}
+
+.more-about-footer,
+.staff-footer,
+.delivery-footer {
+    text-align: right;
+}
+
+.more-about-footer a,
+.staff-footer a,
+.delivery-footer a {
+    color: #aaa;
+}

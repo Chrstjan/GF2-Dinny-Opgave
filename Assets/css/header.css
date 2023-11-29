@@ -1,0 +1,50 @@
+.nav-image {
+    position: relative;
+    margin: 0;
+}
+
+.main-header .nav-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nav-image .header-image-text {
+    position: absolute;
+    bottom: -1%;
+    left: 5%;
+    transform: translate(-50% -50%);
+    color: #AE2320;
+    background: #eee;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.main-nav {
+    margin: 0;
+    background: #333;
+    padding: 1rem;
+}
+
+.main-nav ul {
+    padding: 0;
+    padding-left: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.4rem;
+}
+
+.main-nav ul li {
+    list-style-type: none;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #9E360F;
+}
+
+.main-nav ul li a:hover {
+    color: lightskyblue;
+}
