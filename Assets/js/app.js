@@ -11,6 +11,7 @@ const createGallery = () => {
         //Helper function
         const createHoverElement = (headerText, text, footerText) => {
             const figCaption = document.createElement("figcaption");
+            figCaption.classList.add("dinny-figcaption");
             const figureHeader = document.createElement("header");
             const figureHeaderText = document.createElement("h3");
             figureHeaderText.textContent = headerText;
@@ -19,8 +20,11 @@ const createGallery = () => {
 
             const figureTextContainer = document.createElement("div");
             const figureText = document.createElement("p");
+            const figureTextTwo = document.createElement("p");
             figureText.textContent = text;
+            figureTextTwo.textContent = text;
             figureTextContainer.appendChild(figureText);
+            figureTextContainer.appendChild(figureTextTwo);
             
             const figureFooterContainer = document.createElement("footer");
             const figureFooterText = document.createElement("a");
@@ -43,7 +47,7 @@ const createGallery = () => {
         gallery.appendChild(dinnyFigure);
 
         //This might need to be changed to an array that loops through instead
-        const figureCaption = createHoverElement('Gallery One', 'Lorem Ipsum', 'Read more:');
+        const figureCaption = createHoverElement('Gallery One', 'Hic alias laborum nesciunt ipsa, quidem aut fugit similique beatae, vero ullam eum suscipit assumenda fugiat pariatur optio repudiandae laboriosam eos expedita.', 'More:');
         dinnyFigure.appendChild(figureCaption);
     }); 
 }
