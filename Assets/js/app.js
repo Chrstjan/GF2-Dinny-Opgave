@@ -42,6 +42,7 @@ const createGallery = () => {
         dinnyFigure.appendChild(dinnyImages);
         gallery.appendChild(dinnyFigure);
 
+        //This might need to be changed to an array that loops through instead
         const figureCaption = createHoverElement('Gallery One', 'Lorem Ipsum', 'Read more:');
         dinnyFigure.appendChild(figureCaption);
     }); 
