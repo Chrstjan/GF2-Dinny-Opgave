@@ -7,7 +7,7 @@ const chooseImagesArray = ['Choose-01.jpg', 'Choose-02.jpg', 'Choose-03.jpg', 'C
 const baseUrl = './Assets/images/GFX/';
 
 const createGallery = () => {
-    dinnyArray.forEach((img) => {
+    dinnyArray.forEach((img, index) => {
         //Helper function
         const createHoverElement = (headerText, text, footerText) => {
             const figCaption = document.createElement("figcaption");
@@ -46,8 +46,9 @@ const createGallery = () => {
         dinnyFigure.appendChild(dinnyImages);
         gallery.appendChild(dinnyFigure);
 
-        //This might need to be changed to an array that loops through instead
-        const figureCaption = createHoverElement('Gallery One', 'Hic alias laborum nesciunt ipsa, quidem aut fugit similique beatae, vero ullam eum suscipit assumenda fugiat pariatur optio repudiandae laboriosam eos expedita.', 'More:');
+        const headerTexts = ['Gallery One', 'Gallery Two', 'Gallery Three', 'Gallery Four', 'Gallery Five', 'Gallery Six', 'Gallery Seven', 'Gallery Eight'];
+
+        const figureCaption = createHoverElement(headerTexts[index], 'Hic alias laborum nesciunt ipsa, quidem aut fugit similique beatae, vero ullam eum suscipit assumenda fugiat pariatur optio repudiandae laboriosam eos expedita.', 'More:');
         dinnyFigure.appendChild(figureCaption);
     }); 
 }
