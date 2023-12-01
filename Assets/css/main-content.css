@@ -96,15 +96,17 @@
 }
 
 @media (min-width: 1300px) {
-  .about-header {
-    font-size: 40px;
-    color: #e35f0a;
+  .about-header h2,
+  .staff-header h2,
+  .delivery-header h2,
+  #gallery .gallery-header h2 {
+    font-size: 50px;
   }
 
   .about-figure img,
   .about-staff img,
   .delivery-figure img {
-    width: 40vw;
+    width: 100%;
     height: auto;
     display: block;
   }
