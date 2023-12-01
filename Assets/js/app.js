@@ -1,3 +1,9 @@
+//Creating Contact Form
+import { contactForm } from "./form.js";
+const openContactBtn = document.getElementById("contact-btn");
+openContactBtn.addEventListener("click", contactForm);
+
+//Creating gallery
 const gallery = document.getElementById("gallery");
 const galleryHeader = document.createElement("header");
 galleryHeader.classList.add("gallery-header");
