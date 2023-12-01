@@ -1,7 +1,8 @@
 .about-dinny,
 .the-staff,
 .delivery,
-.dinny-gallery {
+.dinny-gallery,
+.main-footer {
   padding: 1.2rem;
   background: #222;
   padding-bottom: 1rem;
@@ -10,7 +11,8 @@
 .about-header h2,
 .staff-header h2,
 .delivery-header h2,
-#gallery .gallery-header h2 {
+#gallery .gallery-header h2,
+.main-footer .google-header h2 {
   color: #9e360f;
 }
 
