@@ -13,4 +13,47 @@
 }
 
 .contact-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #222;
+  color: #fff;
+  padding-bottom: 7rem;
+}
+
+.contact-form fieldset span {
+  color: #9e360f;
+  font-size: 26px;
+}
+
+.contact-form fieldset span a {
+  cursor: pointer;
+}
+
+.contact-form fieldset textarea {
+  resize: none;
+}
+
+.contact-form fieldset .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-form fieldset input[type="reset"],
+.contact-form fieldset input[type="submit"] {
+  padding: 0.3rem 1.4rem;
+  border-radius: 8px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-form fieldset .resetBtn {
+  background: #9e360f;
+}
+
+.contact-form fieldset .submitBtn {
+  background: #5682a9;
 }
