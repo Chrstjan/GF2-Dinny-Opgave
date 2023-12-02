@@ -72,3 +72,9 @@
 .invalid {
   border: 2px solid #9e360f;
 }
+
+@media (min-width: 1300px) {
+  .contact-form fieldset {
+    padding: 4rem;
+  }
+}
