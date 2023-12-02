@@ -19,6 +19,8 @@
   background: #222;
   color: #fff;
   padding-bottom: 7rem;
+  border-radius: 5px;
+  border: 0;
 }
 
 .contact-form fieldset span {
@@ -28,6 +30,11 @@
 
 .contact-form fieldset span a {
   cursor: pointer;
+}
+
+.contact-form fieldset input {
+  padding: 0.4rem;
+  border-radius: 7px;
 }
 
 .contact-form fieldset textarea {
@@ -56,4 +63,12 @@
 
 .contact-form fieldset .submitBtn {
   background: #5682a9;
+}
+
+.valid {
+  border: 2px solid #5682a9;
+}
+
+.invalid {
+  border: 2px solid #9e360f;
 }
