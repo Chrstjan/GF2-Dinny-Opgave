@@ -13,9 +13,22 @@ const chooseImagesArray = [
 baseUrl;
 
 const createOrderGallery = () => {
+  const orderGalleryHeader = document.createElement("header");
+  orderGalleryHeader.classList.add("order-header");
+  orderGalleryHeader.innerHTML = "<h2>Dinny order ToGo</h2>";
+  orderContainer.appendChild(orderGalleryHeader);
+
+  const closeOrderBtn = document.createElement("span");
+  closeOrderBtn.innerHTML = "<a>&times;</a>";
+  orderContainer.appendChild(closeOrderBtn);
+
+  closeOrderBtn.addEventListener("click", () => {
+    orderContainer.innerHTML = "";
+  });
+
   chooseImagesArray.forEach((img, index) => {
     //Helper Function
-    const createFigCaption = (headerText, text, footerText) => {
+    const createFigCaption = (headerText, text, price, footerText) => {
       const figCaption = document.createElement("figcaption");
       figCaption.classList.add("order-figcaption");
       const figcaptionHeader = document.createElement("header");
@@ -27,7 +40,10 @@ const createOrderGallery = () => {
       const figCaptionTextContainer = document.createElement("div");
       const figCaptionText = document.createElement("p");
       figCaptionText.textContent = text;
+      const figCaptionPrice = document.createElement("p");
+      figCaptionPrice.textContent = price;
       figCaptionTextContainer.appendChild(figCaptionText);
+      figCaptionTextContainer.appendChild(figCaptionPrice);
 
       const figCaptionFooterContainer = document.createElement("footer");
       const figCaptionFooterText = document.createElement("a");
@@ -41,12 +57,11 @@ const createOrderGallery = () => {
     };
 
     const orderFigure = document.createElement("figure");
-    orderFigure.classList.add("order-gallery");
+    orderFigure.classList.add("order-figure");
     const orderImage = document.createElement("img");
     const orderImageSrc = baseUrl + img;
     orderImage.src = orderImageSrc;
     orderFigure.appendChild(orderImage);
-
     orderContainer.appendChild(orderFigure);
 
     const orderHeaderTexts = [
@@ -56,9 +71,12 @@ const createOrderGallery = () => {
       "Item Four",
     ];
 
+    const orderPrices = ["$9.75", "$11.25", "$12,19", "$21.50"];
+
     const figureCaption = createFigCaption(
       orderHeaderTexts[index],
       "Hic alias laborum nesciunt ipsa, quidem aut fugit similique beatae",
+      orderPrices[index],
       "Order:"
     );
     orderFigure.appendChild(figureCaption);

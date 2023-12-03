@@ -1,3 +1,14 @@
+#order-gallery {
+  color: #fff;
+}
+
+#order-gallery span a {
+  color: #9e360f;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#order-gallery,
 .about-dinny,
 .the-staff,
 .delivery,
@@ -8,6 +19,7 @@
   padding-bottom: 1rem;
 }
 
+.order-header h2,
 .about-header h2,
 .staff-header h2,
 .delivery-header h2,
@@ -19,7 +31,8 @@
 .about-figure,
 .about-staff,
 .delivery-figure,
-.dinny-figure {
+.dinny-figure,
+.order-figure {
   width: 100%;
   margin: 0;
   overflow: hidden;
@@ -28,7 +41,8 @@
 .about-figure img,
 .about-staff img,
 .delivery-figure img,
-.dinny-figure img {
+.dinny-figure img,
+.order-figure img {
   width: 100%;
   height: auto;
   display: block;
@@ -58,11 +72,13 @@
   color: lightskyblue;
 }
 
-.dinny-figcaption footer {
+.dinny-figcaption footer,
+.order-figcaption footer {
   text-align: right;
 }
 
-.dinny-figcaption footer a {
+.dinny-figcaption footer a,
+.order-figcaption footer a {
   color: #ccc;
   cursor: pointer;
 }
@@ -96,6 +112,13 @@
 }
 
 @media (min-width: 1300px) {
+  #order-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .about-header h2,
   .staff-header h2,
   .delivery-header h2,
@@ -105,7 +128,8 @@
 
   .about-figure img,
   .about-staff img,
-  .delivery-figure img {
+  .delivery-figure img,
+  .order-figure img {
     width: 100%;
     height: auto;
     display: block;
