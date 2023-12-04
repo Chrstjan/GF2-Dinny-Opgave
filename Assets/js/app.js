@@ -92,6 +92,20 @@ const createGallery = () => {
       "More:"
     );
     dinnyFigure.appendChild(figureCaption);
+
+    const createImageModal = (e) => {
+      const imageModalFigure = document.createElement("figure");
+      imageModalFigure.classList.add("modal-figure");
+      const modalImage = dinnyImages.cloneNode(true);
+      imageModalFigure.appendChild(modalImage);
+      gallery.appendChild(imageModalFigure);
+
+      imageModalFigure.addEventListener("click", () => {
+        imageModalFigure.remove();
+      })
+    }
+
+    dinnyFigure.addEventListener("click", createImageModal);
   });
 };
 
