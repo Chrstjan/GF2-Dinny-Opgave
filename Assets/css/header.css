@@ -72,17 +72,57 @@
 }
 
 @keyframes burgerTop {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(45deg);}
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(7.5px) rotate(45deg);}
+}
+
+@keyframes burgerTopReverse {
+  0% {transform: translateY(7.5px) rotate(45deg);}
+  100% {transform: translateY(0px) rotate(0deg);}
 }
 
 @keyframes burgerMiddle {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes burgerMiddleReverse {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 
 @keyframes burgerBottom {
-  0% {}
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(-6px) rotate(-45deg);}
+}
+
+@keyframes burgerBottomReverse {
+  0% {transform: translateY(-6px) rotate(-45deg);}
+  100% {transform: translateY(0px) rotate(0deg);}
+}
+
+#hamburger-container .bar.burgerTop {
+  animation: burgerTop 0.5s 1 forwards;
+}
+
+#hamburger-container .bar.burgerTopReverse {
+  animation: burgerTopReverse 0.5s 1 forwards;
+}
+
+#hamburger-container .bar.burgerMiddle {
+  animation: burgerMiddle 0.5s 1 forwards;
+}
+
+#hamburger-container .bar.burgerMiddleReverse {
+  animation: burgerMiddleReverse 0.5s 1 forwards;
+}
+
+#hamburger-container .bar.burgerBottom {
+  animation: burgerBottom 0.5s 1 forwards;
+}
+
+#hamburger-container .bar.burgerBottomReverse {
+  animation: burgerBottomReverse 0.5s 1 forwards;
 }
 
 .hamburger-content {

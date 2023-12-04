@@ -2,8 +2,10 @@
 const hamburgerMenu = document.getElementById("hamburger-container");
 const hamBurgerMenuContentMainList = document.querySelectorAll(".main-list li");
 const hamBurgerMenuContentSecondaryList = document.querySelectorAll(".secondary-list li");
+let isOpen = false;
 
 hamburgerMenu.addEventListener("click", () => {
+isOpen = !isOpen;
 
   hamBurgerMenuContentMainList.forEach((li) => {
     li.classList.toggle("hamburger-content");
@@ -13,9 +15,31 @@ hamburgerMenu.addEventListener("click", () => {
     li.classList.toggle("hamburger-content");
   });
 
-  //Add class with animation to the seperate bars
-  
-  
+  document.querySelectorAll(".bar").forEach((span, index) => {
+    span.classList.remove("burgerTop", "burgerMiddle", "burgerBottom", "burgerTopReverse", "burgerMiddleReverse", "burgerBottomReverse");
+    if (isOpen) {
+      if (index === 0) {
+        span.classList.add("burgerTop");
+      }
+       else if (index === 1) {
+        span.classList.add("burgerMiddle");
+      } 
+      else if (index === 2) {
+        span.classList.add("burgerBottom");
+      }
+    }
+    else {
+      if (index === 0) {
+        span.classList.add("burgerTopReverse");
+      }
+      else if(index === 1) {
+        span.classList.add("burgerMiddleReverse");
+      }
+      else if(index === 2) {
+        span.classList.add("burgerBottomReverse");
+      }
+    };
+  });
 });
 
 //Creating gallery
