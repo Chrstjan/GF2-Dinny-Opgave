@@ -12,6 +12,9 @@ hamburgerMenu.addEventListener("click", () => {
   hamBurgerMenuContentSecondaryList.forEach((li) => {
     li.classList.toggle("hamburger-content");
   });
+
+  //Add class with animation to the seperate bars
+  
   
 });
 
@@ -104,7 +107,7 @@ const createGallery = () => {
         imageModalFigure.remove();
       })
     }
-
+    
     dinnyFigure.addEventListener("click", createImageModal);
   });
 };
