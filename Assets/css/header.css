@@ -38,6 +38,7 @@
 
 .main-nav ul li {
   list-style-type: none;
+  display: none;
 }
 
 .main-nav ul li a {
@@ -51,6 +52,25 @@
 
 .main-nav ul li a:hover {
   color: #5682a9;
+}
+
+#hamburger-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  cursor: pointer;
+}
+
+#hamburger-container .bar {
+  width: 23px;
+  height: 5px;
+  background: #fff;
+  margin: 1px 0;
+}
+
+.hamburger-content {
+  display: block !important /* It won't work without !important >:( */;
 }
 
 @media (min-width: 1300px) {
@@ -79,5 +99,13 @@
     justify-content: flex-start;
     align-items: center;
     gap: 2rem;
+  }
+  
+  .main-nav ul li {
+    display: block;
+  }
+
+  #hamburger-container {
+    display: none;
   }
 }

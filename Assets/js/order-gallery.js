@@ -36,6 +36,10 @@ const createOrderGallery = () => {
   });
 
   chooseImagesArray.forEach((img, index) => {
+    const buyOrder = () => {
+      
+    }
+
     //Helper Function
     const createFigCaption = (headerText, text, price, footerText) => {
       const figCaption = document.createElement("figcaption");
@@ -57,6 +61,7 @@ const createOrderGallery = () => {
       const figCaptionFooterContainer = document.createElement("footer");
       const figCaptionFooterText = document.createElement("a");
       figCaptionFooterText.textContent = footerText;
+      figCaptionFooterText.addEventListener("click", buyOrder);
       figCaptionFooterContainer.appendChild(figCaptionFooterText);
       figCaptionTextContainer.appendChild(figCaptionFooterContainer);
       figCaption.appendChild(figCaptionTextContainer);

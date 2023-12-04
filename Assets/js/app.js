@@ -1,3 +1,20 @@
+//Hamburger menu
+const hamburgerMenu = document.getElementById("hamburger-container");
+const hamBurgerMenuContentMainList = document.querySelectorAll(".main-list li");
+const hamBurgerMenuContentSecondaryList = document.querySelectorAll(".secondary-list li");
+
+hamburgerMenu.addEventListener("click", () => {
+
+  hamBurgerMenuContentMainList.forEach((li) => {
+    li.classList.toggle("hamburger-content");
+  });
+
+  hamBurgerMenuContentSecondaryList.forEach((li) => {
+    li.classList.toggle("hamburger-content");
+  });
+  
+});
+
 //Creating gallery
 const gallery = document.getElementById("gallery");
 const galleryHeader = document.createElement("header");
