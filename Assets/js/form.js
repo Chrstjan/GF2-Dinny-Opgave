@@ -157,6 +157,7 @@ const contactForm = () => {
 
   closeContactBtn.addEventListener("click", () => {
     contactContainer.innerHTML = "";
+    isFormOpen = false;
   });
 };
 

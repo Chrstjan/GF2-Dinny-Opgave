@@ -32,6 +32,7 @@ const createOrderGallery = () => {
 
   closeOrderBtn.addEventListener("click", () => {
     orderContainer.innerHTML = "";
+    isOpen = false;
   });
 
   chooseImagesArray.forEach((img, index) => {
