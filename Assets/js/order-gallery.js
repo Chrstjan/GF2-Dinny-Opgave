@@ -10,9 +10,17 @@ const chooseImagesArray = [
   "Choose-04.jpg",
 ];
 
+export let isOpen = false;
+
 baseUrl;
 
 const createOrderGallery = () => {
+  if (isOpen) {
+    return;
+  }
+
+  isOpen = true;
+
   const orderGalleryHeader = document.createElement("header");
   orderGalleryHeader.classList.add("order-header");
   orderGalleryHeader.innerHTML = "<h2>Dinny order ToGo</h2>";

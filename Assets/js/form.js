@@ -1,8 +1,16 @@
+
 //Contact Form
 const contactContainer = document.getElementById("contact-form");
 const openContactBtn = document.getElementById("contact-btn");
 
+let isFormOpen = false;
 const contactForm = () => {
+  if (isFormOpen) {
+    return;
+  }
+
+  isFormOpen = true;
+
   const contactFormElement = document.createElement("form");
   contactFormElement.classList.add("contact-form");
   const contactFieldset = document.createElement("fieldset");
