@@ -36,12 +36,10 @@ const createOrderGallery = () => {
   });
 
   chooseImagesArray.forEach((img, index) => {
-    const buyOrder = () => {
-
-    }
+    const buyOrder = () => {};
 
     //Helper Function
-    const createFigCaption = (headerText, text, price, footerText, link) => {
+    const createFigCaption = (headerText, text, price, footerText) => {
       const figCaption = document.createElement("figcaption");
       figCaption.classList.add("order-figcaption");
       const figcaptionHeader = document.createElement("header");
@@ -61,7 +59,6 @@ const createOrderGallery = () => {
       const figCaptionFooterContainer = document.createElement("footer");
       const figCaptionFooterText = document.createElement("a");
       figCaptionFooterText.textContent = footerText;
-      figCaptionFooterText.setAttribute("href", link);
       figCaptionFooterText.addEventListener("click", buyOrder);
       figCaptionFooterContainer.appendChild(figCaptionFooterText);
       figCaptionTextContainer.appendChild(figCaptionFooterContainer);
@@ -79,8 +76,6 @@ const createOrderGallery = () => {
     orderFigure.appendChild(orderImage);
     orderContainer.appendChild(orderFigure);
 
-    orderFigure.id = `item-${index + 1}`;
-
     const orderHeaderTexts = [
       "Item One",
       "Item Two",
@@ -94,8 +89,7 @@ const createOrderGallery = () => {
       orderHeaderTexts[index],
       "Hic alias laborum nesciunt ipsa, quidem aut fugit similique beatae",
       orderPrices[index],
-      "Order:",
-      `#item-${index + 1}`
+      "Order:"
     );
     orderFigure.appendChild(figureCaption);
   });
