@@ -2,7 +2,7 @@ import { baseUrl } from "./app.js";
 
 const orderContainer = document.getElementById("order-gallery");
 const openOrderBtn = document.getElementById("order-btn");
-
+const deliveryOrderBtn = document.getElementById("delivery-order-btn");
 const chooseImagesArray = [
   "Choose-01.jpg",
   "Choose-02.jpg",
@@ -96,3 +96,4 @@ const createOrderGallery = () => {
 };
 
 openOrderBtn.addEventListener("click", createOrderGallery);
+deliveryOrderBtn.addEventListener("click", createOrderGallery);
