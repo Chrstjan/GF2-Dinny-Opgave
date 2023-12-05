@@ -14,7 +14,7 @@
   bottom: -1%;
   left: 5%;
   transform: translate(-50% -50%);
-  font-family: 'bebas neue', sans-serif;
+  font-family: "bebas neue", sans-serif;
   color: #ae2320;
   background: #eee;
   padding: 1rem;
@@ -68,37 +68,61 @@
   height: 5px;
   background: #fff;
   margin: 1px 0;
-  animation: burgerMiddle 2s 1,2s normal;
+  animation: burgerMiddle 2s 1, 2s normal;
 }
 
 @keyframes burgerTop {
-  0% {transform: translateY(0) rotate(0deg);}
-  100% {transform: translateY(7.5px) rotate(45deg);}
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(7.5px) rotate(45deg);
+  }
 }
 
 @keyframes burgerTopReverse {
-  0% {transform: translateY(7.5px) rotate(45deg);}
-  100% {transform: translateY(0px) rotate(0deg);}
+  0% {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 
 @keyframes burgerMiddle {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes burgerMiddleReverse {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes burgerBottom {
-  0% {transform: translateY(0) rotate(0deg);}
-  100% {transform: translateY(-6px) rotate(-45deg);}
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-6px) rotate(-45deg);
+  }
 }
 
 @keyframes burgerBottomReverse {
-  0% {transform: translateY(-6px) rotate(-45deg);}
-  100% {transform: translateY(0px) rotate(0deg);}
+  0% {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 
 #hamburger-container .bar.burgerTop {
@@ -156,7 +180,7 @@
     align-items: center;
     gap: 2rem;
   }
-  
+
   .main-nav ul li {
     display: block;
   }
