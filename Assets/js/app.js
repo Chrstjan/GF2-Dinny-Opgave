@@ -1,11 +1,12 @@
 //Hamburger menu
 const hamburgerMenu = document.getElementById("hamburger-container");
 const hamBurgerMenuContentMainList = document.querySelectorAll(".main-list li");
-const hamBurgerMenuContentSecondaryList = document.querySelectorAll(".secondary-list li");
+const hamBurgerMenuContentSecondaryList =
+  document.querySelectorAll(".secondary-list li");
 let isOpen = false;
 
 hamburgerMenu.addEventListener("click", () => {
-isOpen = !isOpen;
+  isOpen = !isOpen;
 
   hamBurgerMenuContentMainList.forEach((li) => {
     li.classList.toggle("hamburger-content");
@@ -16,29 +17,31 @@ isOpen = !isOpen;
   });
 
   document.querySelectorAll(".bar").forEach((span, index) => {
-    span.classList.remove("burgerTop", "burgerMiddle", "burgerBottom", "burgerTopReverse", "burgerMiddleReverse", "burgerBottomReverse");
+    span.classList.remove(
+      "burgerTop",
+      "burgerMiddle",
+      "burgerBottom",
+      "burgerTopReverse",
+      "burgerMiddleReverse",
+      "burgerBottomReverse"
+    );
     if (isOpen) {
       if (index === 0) {
         span.classList.add("burgerTop");
-      }
-       else if (index === 1) {
+      } else if (index === 1) {
         span.classList.add("burgerMiddle");
-      } 
-      else if (index === 2) {
+      } else if (index === 2) {
         span.classList.add("burgerBottom");
       }
-    }
-    else {
+    } else {
       if (index === 0) {
         span.classList.add("burgerTopReverse");
-      }
-      else if(index === 1) {
+      } else if (index === 1) {
         span.classList.add("burgerMiddleReverse");
-      }
-      else if(index === 2) {
+      } else if (index === 2) {
         span.classList.add("burgerBottomReverse");
       }
-    };
+    }
   });
 });
 
@@ -129,11 +132,69 @@ const createGallery = () => {
 
       imageModalFigure.addEventListener("click", () => {
         imageModalFigure.remove();
-      })
-    }
-    
+      });
+    };
+
     dinnyFigure.addEventListener("click", createImageModal);
   });
 };
 
 createGallery();
+
+//Cookie Popup
+const createCookiePopUp = () => {
+  const closeCookiePopUp = () => {
+    cookieContainer.remove();
+  };
+
+  //Helper Function
+  const createCookieElement = (
+    cookieText,
+    cookieAcBtnText,
+    cookieDcBtnText
+  ) => {
+    const cookieContainer = document.createElement("article");
+
+    const cookieHeader = document.createElement("header");
+    cookieHeader.innerHTML = "<h2>Allow Cookies</h2>";
+    cookieContainer.appendChild(cookieHeader);
+
+    const cookieTextContainer = document.createElement("div");
+    const cookieInfoText = document.createElement("p");
+    cookieInfoText.textContent = cookieText;
+    cookieTextContainer.appendChild(cookieInfoText);
+
+    const cookieBtnContainer = document.createElement("footer");
+    const cookieAccBtn = document.createElement("button");
+    cookieAccBtn.textContent = cookieAcBtnText;
+    cookieAccBtn.classList.add("accept-btn");
+    const cookieDecBtn = document.createElement("button");
+    cookieDecBtn.textContent = cookieDcBtnText;
+    cookieDecBtn.classList.add("decline-btn");
+    cookieAccBtn.addEventListener("click", closeCookiePopUp);
+    cookieDecBtn.addEventListener("click", closeCookiePopUp);
+
+    cookieBtnContainer.appendChild(cookieAccBtn);
+    cookieBtnContainer.appendChild(cookieDecBtn);
+
+    cookieTextContainer.appendChild(cookieBtnContainer);
+    cookieContainer.appendChild(cookieTextContainer);
+
+    return cookieContainer;
+  };
+
+  const cookieContainer = document.createElement("div");
+  cookieContainer.classList.add("cookie-popup");
+
+  const cookieContent = createCookieElement(
+    "Du giver hermed samtykke til at vi må sælge alt dit private data til kinøserne og Facebook Marketplace",
+    "Ja tak!",
+    "Ja Tak men i rød!"
+  );
+  cookieContainer.appendChild(cookieContent);
+  document.querySelector(".main-header").appendChild(cookieContainer);
+};
+
+window.addEventListener("load", () => {
+  createCookiePopUp();
+});

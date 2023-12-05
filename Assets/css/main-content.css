@@ -1,3 +1,45 @@
+.cookie-popup {
+  width: 60%;
+  height: 33%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #000;
+  background: #222;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.cookie-popup article {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+
+.cookie-popup article footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cookie-popup article footer button {
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.4rem 1.2rem;
+  color: #fff;
+}
+
+.cookie-popup footer .accept-btn {
+  background: #5682a9;
+}
+
+.cookie-popup footer .decline-btn {
+  background: #9e360f;
+}
+
 #order-gallery {
   color: #fff;
 }
