@@ -156,7 +156,7 @@ const createCookiePopUp = () => {
     const cookieContainer = document.createElement("article");
 
     const cookieHeader = document.createElement("header");
-    cookieHeader.innerHTML = "<h2>Allow Cookies</h2>";
+    cookieHeader.innerHTML = "<h2>Tillad Cookies</h2>";
     cookieContainer.appendChild(cookieHeader);
 
     const cookieTextContainer = document.createElement("div");
