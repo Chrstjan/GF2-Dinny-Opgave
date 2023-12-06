@@ -9,6 +9,7 @@
   background: #222;
   z-index: 999;
   border-radius: 10px;
+  animation: cookiePopUpAnimation 2.1s 1 forwards;
 }
 
 .cookie-popup article {
