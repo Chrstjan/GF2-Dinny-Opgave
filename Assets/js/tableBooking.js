@@ -9,6 +9,7 @@ const bookTableForm = () => {
     isBookingOpen = true;
 
     const bookingFormElement = document.createElement("form");
+    bookingFormElement.classList.add("booking-form");
     const bookingFieldset = document.createElement("fieldset");
 
     const closeBookingBtn = document.createElement("span");
@@ -72,11 +73,18 @@ const bookTableForm = () => {
     ];
     const peopleAmount = createBookingSelectOptionElement(peopleAmountOptions, "peopleAmount");
 
+    const selectDateLabel = createBookingLabelElement("Select date", "select-date");
+    const selectDate = createBookingInputElement("datetime-local", "select-date",);
+
     const resetBtn = createBookingInputButtonElement("reset", "reset-btn", "Reset");
+    resetBtn.classList.add("resetBtn");
     const submitBtn = createBookingInputButtonElement("submit", "submit-btn", "Send");
+    submitBtn.classList.add("submitBtn");
     const bookingBtnContainer = document.createElement("div");
+    bookingBtnContainer.classList.add("btn-container");
     bookingBtnContainer.appendChild(resetBtn);
     bookingBtnContainer.appendChild(submitBtn);
+
     const appendChildren = (parent, elements) => {
         elements.forEach((element) => {
             parent.appendChild(element);
@@ -91,6 +99,8 @@ const bookTableForm = () => {
         lName,
         peopleAmountLabel,
         peopleAmount,
+        selectDateLabel,
+        selectDate,
         bookingBtnContainer,
     ]);
 
