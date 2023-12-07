@@ -4,7 +4,7 @@ const contactContainer = document.getElementById("contact-form");
 const openContactBtn = document.getElementById("contact-btn");
 
 let isFormOpen = false;
-const contactForm = () => {
+export const contactForm = () => {
   if (isFormOpen) {
     return;
   }
