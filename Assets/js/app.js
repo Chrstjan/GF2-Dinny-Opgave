@@ -45,7 +45,10 @@ hamburgerMenu.addEventListener("click", () => {
   });
 });
 
+//#region old gallery
+//Old gallery
 //Creating gallery
+/* 
 const gallery = document.getElementById("gallery");
 const galleryHeader = document.createElement("header");
 galleryHeader.classList.add("gallery-header");
@@ -140,6 +143,8 @@ const createGallery = () => {
 };
 
 createGallery();
+*/
+//#endregion old gallery
 
 //Cookie Popup
 const createCookiePopUp = () => {
